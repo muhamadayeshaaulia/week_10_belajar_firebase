@@ -71,7 +71,7 @@ class _MyLoginState extends State<MyLogin> {
               controller: emailCtrl,
               decoration: const InputDecoration(labelText: 'Email'),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             TextField(
               controller: passCtrl,
               decoration: const InputDecoration(labelText: 'Password'),
@@ -82,10 +82,12 @@ class _MyLoginState extends State<MyLogin> {
               const SizedBox(height: 15),
             ],
             ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
               onPressed: _isLoading ? null : _login,
               child: _isLoading
                   ? const CircularProgressIndicator()
-                  : const Text('Login'),
+                  : const Text( style: TextStyle(color: Colors.black),
+                  'Login'),
             ),
           ],
         ),
