@@ -57,7 +57,17 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
+        centerTitle: true,
+        title: const Text(
+          'Login fire base', 
+          style: TextStyle(fontSize: 30),
+          ),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.all(16),
+          ),
     );
   }
 }
