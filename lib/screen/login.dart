@@ -73,6 +73,7 @@ class _MyLoginState extends State<MyLogin> {
             ),
             const SizedBox(height: 20),
             TextField(
+              obscureText: true,
               controller: passCtrl,
               decoration: const InputDecoration(labelText: 'Password'),
             ),
