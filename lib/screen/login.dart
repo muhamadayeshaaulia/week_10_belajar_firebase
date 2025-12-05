@@ -69,7 +69,7 @@ class _MyLoginState extends State<MyLogin> {
           children: [
             TextField(
               controller: emailCtrl,
-              decoration: const InputDecoration(labelText: 'Email'),
+              decoration: const InputDecoration(labelText: 'Email', prefixIcon: Icon(Icons.email), hintText: 'Masukan email anda!'),
             ),
             const SizedBox(height: 20),
             TextField(
