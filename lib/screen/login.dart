@@ -72,6 +72,11 @@ class _MyLoginState extends State<MyLogin> {
                 TextField(controller: emailCtrl,
                 decoration: const InputDecoration(labelText: 'Email'),
                 ),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: passCtrl,
+                  decoration: const InputDecoration(labelText: 'Password',),
+                ),
               ],
             ),
           ),
