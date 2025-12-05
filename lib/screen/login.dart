@@ -68,6 +68,7 @@ class _MyLoginState extends State<MyLogin> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              keyboardType: TextInputType.emailAddress,
               controller: emailCtrl,
               decoration: const InputDecoration(labelText: 'Email', prefixIcon: Icon(Icons.email), hintText: 'Masukan email anda!'),
             ),
