@@ -60,30 +60,35 @@ class _MyLoginState extends State<MyLogin> {
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         centerTitle: true,
-        title: const Text(
-          'Login fire base', 
-          style: TextStyle(fontSize: 30),
-          ),
-          ),
-          body: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                TextField(controller: emailCtrl,
-                decoration: const InputDecoration(labelText: 'Email'),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: passCtrl,
-                  decoration: const InputDecoration(labelText: 'Password',),
-                ),
-                const SizedBox(height: 15),
-                if (_error != null) ...[
-                  Text(_error!, style: const TextStyle( color: Colors.red)),
-                ]
-              ],
+        title: const Text('Login fire base', style: TextStyle(fontSize: 30)),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            TextField(
+              controller: emailCtrl,
+              decoration: const InputDecoration(labelText: 'Email'),
             ),
-          ),
+            const SizedBox(height: 10),
+            TextField(
+              controller: passCtrl,
+              decoration: const InputDecoration(labelText: 'Password'),
+            ),
+            const SizedBox(height: 15),
+            if (_error != null) ...[
+              Text(_error!, style: const TextStyle(color: Colors.red)),
+              const SizedBox(height: 15),
+            ],
+            ElevatedButton(
+              onPressed: _isLoading ? null : _login,
+              child: _isLoading
+                  ? const CircularProgressIndicator()
+                  : const Text('Login'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
