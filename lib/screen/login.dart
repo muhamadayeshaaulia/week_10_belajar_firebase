@@ -67,6 +67,13 @@ class _MyLoginState extends State<MyLogin> {
           ),
           body: Padding(
             padding: const EdgeInsets.all(16),
+            child: Column(
+              children: [
+                TextField(controller: emailCtrl,
+                decoration: const InputDecoration(labelText: 'Email'),
+                ),
+              ],
+            ),
           ),
     );
   }
