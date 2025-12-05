@@ -66,4 +66,5 @@ class DefaultFirebaseOptions {
     projectId: 'myfristproject-dd7da',
     storageBucket: 'myfristproject-dd7da.firebasestorage.app',
   );
+
 }
